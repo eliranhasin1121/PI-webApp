@@ -4,15 +4,18 @@ import PiIcon from '../../assets/page1/pi.jpg';
 import sectionCImage from '../../assets/page1/sectionC.jpg';
 import timeLine from '../../assets/page1/timeline.png';
 import sectionEBackground from '../../assets/page1/sectionE.jpg';
+import samin from '../../assets/page1/samin.png';
 
 export const MainWrapper = styled('div')``;
 
-export const SectionA = styled.div`
+const BackgroundImage = styled.div`
+background-size:cover;
+background-repeat:no-repeat;
+`
+export const SectionA = styled(BackgroundImage)`
 background-image: url(${sectionABackground});
 height:725px;
 width:100%;
-background-repeat: no-repeat;
-background-size: cover;
 `
 
 export const IconWrapper = styled.div`
@@ -41,13 +44,12 @@ align-items:center;
 height:100%;
 `
 
-export const PiWrapper = styled.div`
-    height: 420px;
-    width: 471px;
-    border-radius: 390px;
+export const PiWrapper = styled(BackgroundImage)`
+height: 420px;
+width: 471px; 
+border-radius: 390px;
 background-image:url(${PiIcon});
-background-repeat:no-repeat;
-background-size: cover;
+
 `
 
 export const TextWrapper = styled.div`
@@ -60,10 +62,8 @@ width: 470px;
 text-align:left;
 `
 
-export const SectionC = styled.div`
+export const SectionC = styled(BackgroundImage)`
 background-image:url(${sectionCImage});
-background-size:cover;
-background-repeat:no-repeat;
 height:750px;
 width:100%;
 `
@@ -90,18 +90,14 @@ padding:0px 25px;
 text-align:left;
 `
 
-export const SectionD = styled.div`
+export const SectionD = styled(BackgroundImage)`
 height:450px;
 width:100%;
 background-image:url(${timeLine});
-background-size:cover;
-background-repeat:no-repeat;
 `
 
-export const SectionE = styled.div`
+export const SectionE = styled(BackgroundImage)`
 background-image:url(${sectionEBackground});
-background-repeat:no-repeat;
-background-size:cover;
 height:750px;
 width:100%;
 display: flex;
@@ -132,7 +128,7 @@ text-align:center;
 export const MainText = styled.div`
 font-family: Helvetica;
 font-size: 25px;
-color:${({color}) => color ||'#000000' };
+color:${({color}) => color || '#000000' };
 letter-spacing: -1.41px;
 text-align: center;
 `
@@ -166,10 +162,8 @@ letter-spacing: -1.41px;
 text-align: center;
 `
 
-export const Icon  = styled.div`
+export const Icon  = styled(BackgroundImage)`
 background-image:url(${({img}) => img});
-background-size:cover;
-background-repeat:no-repeat;
 height: 120px;
 width: 120px;
 border-radius: 120px;
@@ -182,14 +176,83 @@ background: #919191;
 `
 
 export const ArrowWrapper = styled.div`
-    position: relative;
-    left: 47%;
-    top: -42px;
+position: relative;
+left: 47%;
+top: -42px;
 `
 
 export const OtherProducts = styled.div`
-    position: relative;
-    bottom: 30px;
-    right: 13px;
-    color:#ffffff;
+position: relative;
+bottom: 30px;
+right: 13px;
+color:#ffffff;
+`
+
+export const SectionH = styled.div`
+width:100%;
+height:1118px;
+display:flex;
+flex-direction:column;
+`
+
+export const SubSectionH = styled.div`
+display:flex;
+height:559px;
+`
+
+
+export const SubContentWrapper = styled.div`
+padding:120px 120px 20px 120px;
+flex:1;
+display:flex;
+flex-direction:column;
+background-color:${({backgroundColor}) => backgroundColor || '#ffffff'};
+align-items:center;
+`
+
+export const  SubTextWrapper = styled.div`
+font-family: Helvetica;
+font-size: 60px;
+letter-spacing: -3.37px;
+width:487px;
+font-weight:normal;
+padding:30px;
+`
+
+export const BolderText = styled.b`
+color:#000000;
+text-align:center;
+`
+
+export const ButtonWrapper = styled.div`
+display:flex;
+justify-content:center;
+width:487px;
+padding:25px 0px;
+
+`
+
+export const ReadMoreButton = styled.button`
+background: #FFFFFF;
+border: 2px solid #979797;
+border-radius: 8px;
+width:195px;
+height:45px;
+font-family: Helvetica;
+font-size: 20px;
+color: #000000;
+letter-spacing: -1.12px;
+text-align: center;
+`
+
+export const SaminSection = styled.div`
+display: flex;
+justify-content: center;
+align-items:center;
+`
+
+export const SectionI = styled.div`
+padding:50px 30px;
+height:1981px;
+width:100%;
 `

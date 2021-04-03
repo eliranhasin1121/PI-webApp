@@ -4,14 +4,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Card, Button } from 'antd';
 // import { Icon } from '@ant-design/compatible';
 import { DownCircleTwoTone,DownCircleOutlined } from '@ant-design/icons';
-import { MainWrapper,SectionA,IconWrapper, SectionB, LeftWrapper, PiWrapper, RightWrapper,TextWrapper,SectionC,SectionCTextWrapper, BoldText, RegularText, SectionD,SectionE,SectionETextWrapper,SectionF,MainText,SecondaryText, OurProductsStyled, ProductsContainer, ProductWrapper, LogoText,Icon,SectionG, ArrowWrapper, OtherProducts } from './Main.styled';
+import { MainWrapper,SectionA,IconWrapper, SectionB, LeftWrapper, PiWrapper, RightWrapper,
+TextWrapper,SectionC,SectionCTextWrapper, BoldText, RegularText, SectionD,SectionE,SectionETextWrapper,SectionF,MainText,SecondaryText, 
+OurProductsStyled, ProductsContainer, ProductWrapper, LogoText,Icon,SectionG, ArrowWrapper, 
+OtherProducts,SectionH,SubContentWrapper,SubTextWrapper, SubSectionH,BolderText,ButtonWrapper, ReadMoreButton,SaminSection,SectionI} from './Main.styled';
 import { changeLanguage, getActiveLanguage } from '../../config/translations/utils';
 import { Text, FlexDivCenter } from '../../components/Typography/Typography';
-import {PiNovel,PIEmerging,PiOpportunites, ArrowDown} from '../../common/icons/iconSVG';
+import {PiNovel,PIEmerging,PiOpportunites, ArrowDown,SaminSVG,CohenInvestmentSVG} from '../../common/icons/iconSVG';
+import {TeamMemberImage,TeamMemberImageWrapper,TeamMemberWrapper} from '../../common/styled/common.styled';
 // import { loginAction } from '../../data/modules/auth/auth.actions';
 import opportImg from '../../assets/page1/opportunities.png';
 import emerging from '../../assets/page1/emerging.png';
 import novel from '../../assets/page1/novel.png';
+import memberA from '../../assets/page1/member1-1.jpg';
 
 export default function Main({}){
 
@@ -24,6 +29,28 @@ export default function Main({}){
   //     </LogoText>
   //   </ProductWrapper>
   // )
+
+  const CryptoSection = () => (
+    <SubContentWrapper>
+      <SubTextWrapper>
+        <BolderText>Cryptocurrency</BolderText> never &nbsp; been &nbsp; so <BolderText>easy</BolderText>
+      </SubTextWrapper>
+      <ButtonWrapper>
+      <ReadMoreButton>READ MORE</ReadMoreButton>
+      </ButtonWrapper>
+    </SubContentWrapper>
+  )
+
+   const BeliveSection = ()=>(
+    <SubContentWrapper>
+      <SubTextWrapper>
+        We <BolderText>believe</BolderText> in the <BolderText>future</BolderText>
+      </SubTextWrapper>
+      <ButtonWrapper style={{paddingTop:120}}>
+      <ReadMoreButton>READ MORE</ReadMoreButton>
+      </ButtonWrapper>
+    </SubContentWrapper>
+  )
 
   return (
     <MainWrapper>
@@ -106,6 +133,38 @@ Prior to founding PI Group, Mr. Cohen managed the stock options desk at Mizrahi 
           <SecondaryText opacity={0.7}>other</SecondaryText>
         </OtherProducts>
       </SectionG>
+      <SectionH>
+        <SubSectionH>
+        <CryptoSection/>
+        <SubContentWrapper backgroundColor={'#000000'}>
+        <SaminSection>
+        <SaminSVG/>
+        </SaminSection>
+        </SubContentWrapper>
+        </SubSectionH>
+        <SubSectionH>
+        </SubSectionH>
+        <SubSectionH>
+          <SubContentWrapper style={{paddingTop:250}} backgroundColor={'#000000'}>
+            <SaminSection>
+              <CohenInvestmentSVG/>
+            </SaminSection>
+          </SubContentWrapper>
+          <BeliveSection/>
+        </SubSectionH>
+      </SectionH>
+      <SectionI>
+        <SecondaryText>OUR TEAM</SecondaryText>
+        <TeamMemberWrapper>
+          <TeamMemberImageWrapper>
+            <TeamMemberImage memberImg={memberA}/>
+          </TeamMemberImageWrapper>
+          <TextWrapper style={{justifyContent:'left',flex:1}}>
+            <MainText>RONEN BITMAN</MainText>
+            <SecondaryText>COO</SecondaryText>
+          </TextWrapper>
+        </TeamMemberWrapper>
+      </SectionI>
     </MainWrapper>
   );
 };
