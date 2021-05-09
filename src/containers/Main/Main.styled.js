@@ -85,15 +85,17 @@ color:black;
 `
 
 export const RegularText = styled.div`
-font-size:22px;
+font-size:18px;
 padding:0px 25px;
 text-align:left;
 `
 
 export const SectionD = styled(BackgroundImage)`
-height:450px;
+height:300px;
 width:100%;
+background-size:contain;
 background-image:url(${timeLine});
+
 `
 
 export const SectionE = styled(BackgroundImage)`
@@ -106,7 +108,7 @@ justify-content: flex-end;
 
 export const SectionETextWrapper = styled.div`
 height:100%;
-width:20%;
+width:27%;
 background-color:#ffffff;
 opacity:0.7;
 margin-right:70px;
@@ -189,10 +191,9 @@ color:#ffffff;
 `
 
 export const SectionH = styled.div`
-width:100%;
-height:1118px;
-display:flex;
-flex-direction:column;
+display:grid;
+grid-template-columns: 1fr 1fr;
+grid-template-rows:1fr 1fr;
 `
 
 export const SubSectionH = styled.div`

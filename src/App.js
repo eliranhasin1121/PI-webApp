@@ -10,7 +10,7 @@ import createStore from './data/store';
 
 const routes = [
   { path: "/", component: Main, isExact: true },
-  // { path: "/template", component: <div>template</div>, isExact: true }
+  // { path: "/template", component: <div>template</div>, isExact: true } bnhju87*
 ];
 
 function App() {

@@ -17,10 +17,11 @@ import opportImg from '../../assets/page1/opportunities.png';
 import emerging from '../../assets/page1/emerging.png';
 import novel from '../../assets/page1/novel.png';
 import memberA from '../../assets/page1/member1-1.jpg';
+import useMedia from '../../customHooks/UseMedia';
 
 export default function Main({}){
 
-
+const { isMobile } = useMedia();
   // const Product = (logo,text) => (
   //   <ProductWrapper>
   //    <Icon img={opportImg}/>
@@ -29,6 +30,8 @@ export default function Main({}){
   //     </LogoText>
   //   </ProductWrapper>
   // )
+
+  console.log({isMobile});
 
   const CryptoSection = () => (
     <SubContentWrapper>
@@ -134,24 +137,18 @@ Prior to founding PI Group, Mr. Cohen managed the stock options desk at Mizrahi 
         </OtherProducts>
       </SectionG>
       <SectionH>
-        <SubSectionH>
         <CryptoSection/>
         <SubContentWrapper backgroundColor={'#000000'}>
         <SaminSection>
         <SaminSVG/>
         </SaminSection>
         </SubContentWrapper>
-        </SubSectionH>
-        <SubSectionH>
-        </SubSectionH>
-        <SubSectionH>
           <SubContentWrapper style={{paddingTop:250}} backgroundColor={'#000000'}>
             <SaminSection>
               <CohenInvestmentSVG/>
             </SaminSection>
           </SubContentWrapper>
           <BeliveSection/>
-        </SubSectionH>
       </SectionH>
       <SectionI>
         <SecondaryText>OUR TEAM</SecondaryText>
