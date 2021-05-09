@@ -1,10 +1,9 @@
 import styled from 'styled-components';
-import sectionABackground from '../../assets/page1/sectionA.jpg';
 import PiIcon from '../../assets/page1/pi.jpg';
+import sectionABackground from '../../assets/page1/sectionA.jpg';
 import sectionCImage from '../../assets/page1/sectionC.jpg';
-import timeLine from '../../assets/page1/timeline.png';
 import sectionEBackground from '../../assets/page1/sectionE.jpg';
-import samin from '../../assets/page1/samin.png';
+import timeLine from '../../assets/page1/timeline.png';
 
 export const MainWrapper = styled('div')``;
 
@@ -25,9 +24,11 @@ export const IconWrapper = styled.div`
 `
 
 export const SectionB = styled.div`
-display:flex;
+display:grid;
+grid-template-columns:${({isMobile}) => isMobile ? '1fr' : '1fr 1fr'};
 width:100%;
-height:725px;
+grid-gap:30px;
+padding:20px;
 `
 export const LeftWrapper = styled.div`
 height:100%;
@@ -39,15 +40,15 @@ align-items:center;
 export const RightWrapper = styled.div`
 flex:1;
 display:flex;
-justify-content: end;
+justify-content: ${({isMobile}) => isMobile ? 'center' : 'end'};
 align-items:center;
 height:100%;
 `
 
 export const PiWrapper = styled(BackgroundImage)`
-height: 420px;
-width: 471px; 
-border-radius: 390px;
+height: ${({isMobile}) => isMobile ? '244px' : '420px'};
+width: ${({isMobile}) => isMobile ? '244px' : '471px'};
+border-radius:${({isMobile}) => isMobile ? '122px' : '390px'};
 background-image:url(${PiIcon});
 
 `
@@ -57,8 +58,8 @@ height:100%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:36px;
-width: 470px;
+font-size:${({isMobile}) => isMobile ? '24px' : '36px'};
+width: ${({isMobile}) => isMobile ? '303px' : '470px'};
 text-align:left;
 `
 

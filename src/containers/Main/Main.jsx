@@ -62,12 +62,12 @@ const { isMobile } = useMedia();
 
       </IconWrapper>
       </SectionA>
-      <SectionB>
+      <SectionB isMobile={isMobile}>
         <LeftWrapper>
-          <PiWrapper/>
+          <PiWrapper isMobile={isMobile}/>
         </LeftWrapper>
-        <RightWrapper>
-          <TextWrapper>
+        <RightWrapper  isMobile={isMobile}>
+          <TextWrapper isMobile={isMobile}>
           Pi is an absolute return macro 
           volatility hedge fund focused 
           primarily on emerging market 
